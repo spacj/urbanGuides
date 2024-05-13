@@ -5,8 +5,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function MyNavbar() {
   return (
-    <Navbar expand="lg" className="bg-white fixed-top max-h-[12vh]">
-      <Container className="d-flex justify-content-between align-items-center bg-white">
+    <Navbar expand="lg" className="bg-white flex fixed-top max-h-[12vh]">
+      <Container className="flex justify-content-between align-items-center bg-white min-w-full">
         <Navbar.Brand href="/">
           <img src="/images/logo.png" alt="" className="w-[35vw] mt-1" />
         </Navbar.Brand>
