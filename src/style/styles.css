@@ -78,3 +78,11 @@ button.active div{
   color: white;
   font-weight: 800;
 }
+.btn-hero-or{
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 15px;
+  color: #fe573d;
+  font-weight: 800;
+  text-align: center;
+}
