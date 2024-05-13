@@ -23,7 +23,7 @@ function Cards({ item }) {
 
   return (
     <div className="container">
-      <div className="justify-content-center grid grid-cols-2">
+      <div className="justify-content-center grid sm:grid-cols-1 md:grid-cols-2">
         {item.map((val) => (
           <a key={val.id} href={val.linkTo} className="col-md-4 col-sm-6 card m-1 overa" style={{ textDecoration: 'none' }}>
             <div className="card-img-top text-center">
@@ -31,10 +31,10 @@ function Cards({ item }) {
             </div>
             <div className="card-body">
               <div className="card-reviews">
-                <span className="reviews-bar-card"><FontAwesomeIcon icon={faStar} /> {val.rate} ({val.reviews}) ◦ {val.time}</span>
+                <span className="reviews-bar-card text-sm"><FontAwesomeIcon icon={faStar} /> {val.rate} ({val.reviews}) ◦ {val.time}</span>
               </div>
               <div className="card-title fw-bold fs-6">
-                {truncateTitle(val.title, 53)}
+                {truncateTitle(val.title, 90)}
               </div>
               <div className="flex flex-row justify-between items-center">
                 <div className="card-price-tag">From {val.price} </div>
