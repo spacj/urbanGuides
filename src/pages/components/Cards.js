@@ -17,6 +17,9 @@ function Cards({ item }) {
   const getProviderIcon = (provider) => {
     return providerIcons[provider] || providerIcons['default'];
   };
+  const truncateTitle = (title, maxLength) => {
+    return title.length > maxLength ? title.slice(0, maxLength) + '...' : title;
+  };
 
   return (
     <div className="container">
@@ -30,8 +33,8 @@ function Cards({ item }) {
               <div className="card-reviews">
                 <span className="reviews-bar-card"><FontAwesomeIcon icon={faStar} /> {val.rate} ({val.reviews}) ◦ {val.time}</span>
               </div>
-              <div className="card-title fw-bold fs-4">
-                {val.title}
+              <div className="card-title fw-bold fs-6">
+                {truncateTitle(val.title, 53)}
               </div>
               <div className="flex flex-row justify-between items-center">
                 <div className="card-price-tag">From {val.price} </div>
