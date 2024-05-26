@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import TourData from '../content/tourData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPercent, faWineGlass, faCity, faMasksTheater, faUtensils, faPersonHiking, faFire, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import { faPercent, faWineGlass, faCity, faMasksTheater, faUtensils, faPersonHiking, faFire, faBarsStaggered, faBusSimple } from '@fortawesome/free-solid-svg-icons';
 
 const categoryIcons = {
   'Best Offers': faPercent,
+  'Transport': faBusSimple,
   'City Tours': faCity,
   'Art & Culture': faMasksTheater,
   'Food': faUtensils,
@@ -14,12 +15,24 @@ const categoryIcons = {
   // Add more categories and their corresponding icons here
 };
 
-function Buttons({ menuItems, filterItems, setItems }) {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+const categoryOrder = [
+  'Best Offers',
+  'Transport',
+  'City Tours',
+  'Art & Culture',
+  'Food',
+  'Wine & Liquors',
+  'Nature',
+  'Adrenaline',
+  // Add the categories in the desired order
+];
+
+function Buttons({ filterItems, setItems }) {
+  const [selectedCategory, setSelectedCategory] = useState("Best Offers");
 
   return (
     <div className="scrollmenu">
-      {menuItems.map((val, index) => (
+      {categoryOrder.map((val) => (
         <button
           key={val}
           className={`${selectedCategory === val ? 'active' : ''}`}
