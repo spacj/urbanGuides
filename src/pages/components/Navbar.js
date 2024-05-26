@@ -10,7 +10,14 @@ function MyNavbar() {
         <Navbar.Brand href="/">
           <img src="/images/logo.png" alt="" className="w-[35vw] mt-1" />
         </Navbar.Brand>
-        <Navbar.Toggle className="mt-1 custom-toggle-icon" aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          className="mt-1"
+          style={{
+            border: 'none',
+            boxShadow: 'none',
+            outline: 'none',
+          }}
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
