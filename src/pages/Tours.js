@@ -18,7 +18,7 @@ const Tours = () => {
       <div className="h-[13vh]"></div>
       <div className="flex flex-col justify-center text-center -mt-[3vh]">
         <h2 className="font-light">Discover the best tours in<br/><span className="text-[#fe573d] font-bold text-[30pt]">Milan</span>, <span className="font-medium text-3xl">Italy</span> </h2>
-        <p className="w-screen text-white bg-[#fe573d] mt-1 -ml-[3vw] px-4 py-2">Choose your favorite category below and enjoy the best tours in the city</p>
+        <p className="w-screen text-white bg-[#fe573d] mt-1 -ml-[3vw] px-4 py-2">Choose your favorite category below and navigate through amazing tours</p>
       </div>
       <div className="row">
         <Buttons
