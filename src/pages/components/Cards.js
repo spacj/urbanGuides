@@ -37,7 +37,7 @@ function Cards({ item }) {
                 {truncateTitle(val.title, 90)}
               </div>
               <div className="flex flex-row justify-between items-center">
-                <div className="card-price-tag">From {val.price} </div>
+                <div className="card-price-tag"><span className="text-sm font-light">Price per person from</span> <br/><span className="font-bold text-xl">{val.price}</span> </div>
                 <div className="card-provider">
                   <img src={getProviderIcon(val.provider)} alt={val.provider} className="h-10 mr-2" />
                 </div>
